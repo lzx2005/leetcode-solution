@@ -5,7 +5,7 @@ import java.util.HashMap;
  * https://leetcode-cn.com/problems/two-sum/
  * Created by hzlizx on 2019/3/21
  */
-public class Solution {
+public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -16,12 +16,5 @@ public class Solution {
             map.put(nums[i], i);
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-        int[] sums = {3, 2, 4};
-        int target = 6;
-        int[] ints = new Solution().twoSum(sums, target);
-        System.out.println(ints[0] + "," + ints[1]);
     }
 }
