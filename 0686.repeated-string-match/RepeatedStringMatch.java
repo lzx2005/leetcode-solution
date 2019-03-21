@@ -1,3 +1,5 @@
+import io.github.lzx2005.string.StringUtilsExt;
+
 /**
  * 给定两个字符串 A 和 B, 寻找重复叠加字符串A的最小次数，使得字符串B成为叠加后的字符串A的子串，如果不存在则返回 -1。
  * 举个例子，A = "abcd"，B = "cdabcdab"。
