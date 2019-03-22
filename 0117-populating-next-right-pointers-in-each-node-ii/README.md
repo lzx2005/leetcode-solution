@@ -92,7 +92,7 @@ while (!queue.isEmpty()) {
 3. Node node= queue.remove(); 得到当前队列中的节点 `node`， 因为弹出了第一个节点，当前队列为：
 
 |index|0|1|
-| :--: | :--: |:--: |:--: |
+| :--: | :--: |:--: |
 | Node | 3 |    |
 
 4. 判断当前size 大于0 ，则进行`node.next`指向操作  node.next = queue.peek() ，那么2 就 指向了 3，但是3没有弹出。
