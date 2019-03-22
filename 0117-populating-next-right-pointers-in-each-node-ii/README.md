@@ -49,7 +49,7 @@ while (!queue.isEmpty()) {
 int size = queue.size(); //获取当前队列中已有的节点的数量
 ```
 
-进入第二次循环
+进入第二层循环
 
 ```java
 while (!queue.isEmpty()) {
