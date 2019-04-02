@@ -9,43 +9,22 @@
  */
 public class MinimumSizeSubarraySum {
 
-    //todo 还没做完
-
     public static void main(String[] args) {
-        int[] arr = {12,28,83,4,25,26,25,2,25,25,25,12};
+        int[] arr = {12, 28, 83, 4, 25, 26, 25, 2, 25, 25, 25, 12};
         int i = new MinimumSizeSubarraySum().minSubArrayLen(213, arr);
         System.out.println(i);
     }
 
 
     public int minSubArrayLen(int s, int[] nums) {
-        int p1 = 0, p2 = 0;
-        for (int num : nums) {
-            if (num >= s) {
-                return 1;
-            }
-        }
+        int p1 = 0, p2 = 0, temp = nums.length + 1;
         while (p1 < nums.length && p2 < nums.length) {
-            if (isSorted(nums, p1, p2)) {
-                if (sum(nums, p1, p2) >= s) {
-                    int pp1 = p1;
-                    while (pp1 <= p2) {
-                        if (sum(nums, pp1, p2) >= s) {
-                            pp1 += 1;
-                        } else {
-                            break;
-                        }
-                    }
-                    pp1 -= 1;
-                    return (p2 - pp1) + 1;
-                } else {
-                    p2++;
-                }
-            } else {
-                p1++;
+            if (sum(nums, p1, p2) > s) {
+
             }
         }
-        return 0;
+
+        return temp > nums.length ? 0 : temp;
     }
 
     private boolean isSorted(int[] array, int begin, int end) {
